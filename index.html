@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Our Love Timeline</title>
+    <!-- Google Fonts: Press Start 2P -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!-- Welcome / Intro Section -->
+    <section id="welcome-screen" class="screen">
+      <h1>Happy Valentine’s Day, baby.</h1>
+      <h2>Dear Tomoka, welcome to our love story.</h2>
+      <button id="start-presentation">Watch Movie</button>
+    </section>
+
+    <!-- Timeline Presentation Section -->
+    <section id="timeline-screen" class="screen hidden">
+      <div id="timeline-container">
+        <!-- Timeline slide will be injected here -->
+        <div id="slide-container"></div>
+        <div id="navigation">
+          <button id="prev-slide" class="nav-btn">Previous</button>
+          <button id="next-slide" class="nav-btn">Next</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Personalized Message Section -->
+    <section id="message-section" class="screen hidden">
+      <div id="message-container">
+        <h2>To Tomoka</h2>
+        <p id="personalized-message" data-text="Happy Valentine’s Day, Tomoka! I love you more each day. Our journey continues and I can't wait for what's next..."></p>
+      </div>
+    </section>
+
+    <!-- Persistent Audio Player -->
+    <div id="audio-player-container">
+      <audio id="song-player" controls>
+        <source src="assets/audio/song.mp3" type="audio/mp3" />
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+    <!-- Decorative Elements Container -->
+    <div id="decoratives"></div>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
