@@ -1,99 +1,118 @@
 /* Background Wallpaper */
 body {
-    margin: 0;
-    padding: 0;
-    /* Adjusted path relative to this CSS file */
-    background: url("../background/wallpaper.png") no-repeat center center fixed;
-    background-size: cover;
-    font-family: 'Press Start 2P', cursive;
-    color: #333;
-    position: relative;
-    overflow: hidden; /* Hide overflow from decorative GIFs */
-  }
-  
-  /* Screen Sections */
-  .screen {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    text-align: center;
-    transition: opacity 0.5s ease;
-    position: relative;
-    z-index: 10; /* Ensure main content is above decoratives */
-  }
-  .hidden {
-    display: none;
-  }
-  
-  /* Welcome Screen: No overriding background so wallpaper shows */
-  #welcome-screen {
-    padding: 20px;
-  }
-  
-  /* Retro Button Styling with 3D Look */
-  button {
-    background: linear-gradient(145deg, #ffc0cb, #ff99aa);
-    border: 2px solid #ff66cc;
-    border-radius: 5px;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 10px 20px;
-    font-family: 'Press Start 2P', cursive;
-    cursor: pointer;
-    transition: transform 0.1s ease, box-shadow 0.1s ease;
-    max-width: 250px;
-  }
-  button:hover {
-    transform: translateY(-8px);
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Timeline Container */
-  #timeline-container {
-    position: relative;
-    max-width: 800px;
-    width: 90%;
-    margin: 0 auto;
-  }
-  #slide-container {
-    position: relative;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  /* Center and constrain timeline media */
-  #slide-container img,
-  #slide-container video {
-    display: block;
-    margin: 0 auto;
-    max-height: 80vh;
-    max-width: 100%;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    border: 5px solid #ffc0cb;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  }
-  
-  /* Navigation Buttons (inherits from button styling) */
-  .nav-btn {
-    margin: 0 10px;
-  }
-  
-  /* Caption and Description (text slightly bigger) */
-  .caption {
-    font-size: 1rem;
-    margin-top: 10px;
-  }
-  .description {
-    font-size: 0.9rem;
-    margin-top: 5px;
-    border-right: 2px solid #000;
-    white-space: nowrap;
-    overflow: hidden;
-  }
-  
- /* Message Section: Make sure the entire message area is not centered vertically */
+  margin: 0;
+  padding: 0;
+  /* Adjusted path relative to this CSS file */
+  background: url("../background/wallpaper.png") no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Press Start 2P', cursive;
+  color: #333;
+  position: relative;
+  overflow: hidden; /* Hide overflow from decorative GIFs */
+}
+
+/* Adjust welcome screen heading sizes */
+#welcome-screen h1 {
+  font-size: 1.3rem; /* Adjust as needed */
+}
+
+#welcome-screen h2 {
+  font-size: 1rem; /* Adjust as needed */
+}
+
+/* Screen Sections */
+.screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  transition: opacity 0.5s ease;
+  position: relative;
+  z-index: 10; /* Ensure main content is above decoratives */
+}
+.hidden {
+  display: none;
+}
+
+/* Welcome Screen: No overriding background so wallpaper shows */
+#welcome-screen {
+  padding: 20px;
+}
+
+/* Retro Button Styling with 3D Look */
+button {
+  background: linear-gradient(145deg, #ffc0cb, #ff99aa);
+  border: 2px solid #ff66cc;
+  border-radius: 5px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px 20px;
+  font-family: 'Press Start 2P', cursive;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  max-width: 250px;
+}
+button:hover {
+  transform: translateY(-8px);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Timeline Container */
+#timeline-container {
+  position: relative;
+  max-width: 800px;
+  width: 90%;
+  margin: 0 auto;
+}
+#slide-container {
+  position: relative;
+  margin-bottom: 20px;
+  text-align: center;
+}
+/* Center and constrain timeline media */
+#slide-container img,
+#slide-container video {
+  display: block;
+  margin: 0 auto;
+  max-height: 80vh;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border: 5px solid #ffc0cb;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Navigation Buttons (inherits from button styling) */
+.nav-btn {
+  margin: 0 10px;
+}
+
+/* Caption and Description */
+#slide-container .caption {
+  font-size: 1.2rem;
+  margin-top: 20px;  /* Increased margin to give more space below the photo */
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  padding: 0 10px;
+}
+#slide-container .description {
+  font-size: 1rem;
+  margin-top: 5px;
+  max-width: 600px;
+  margin: 0 auto;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  padding: 0 10px;
+}
+
+/* Message Section: Make sure the entire message area is not centered vertically */
 #message-section {
   display: flex;
   align-items: flex-start; /* Align items to the top */
@@ -105,61 +124,61 @@ body {
 
 #message-container {
   border: 2px solid #ff66cc;
-  background: rgba(255, 255, 255, 0.3); /* 30% opacity, change 0.3 to adjust transparency */
+  background: rgba(255, 255, 255, 0.3); /* 30% opacity */
   padding: 20px;
-  max-width: 600px;
+  max-width: 550px;
   width: 90%;
   margin: 20px auto;
   text-align: left;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-
-/* Personalized Message: Remove any fixed width and prevent unwanted text selection */
 #personalized-message {
+  border-right: 2px solid #000;
+  max-width: 550px;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: break-word;
   font-size: 1rem;
-  width: auto;  /* Let it expand naturally */
-  user-select: none; /* Optional: prevents the text from being highlighted */
+  width: 100%;
+  user-select: none;
   margin-top: 10px;
 }
 
-  
-  
-  /* Audio Player Container */
-  #audio-player-container {
-    position: fixed;
-    bottom: 10px;
-    left: 10px;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 5px 10px;
-    border: 2px solid #ff66cc;
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    z-index: 10;
+/* Audio Player Container */
+#audio-player-container {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 5px 10px;
+  border: 2px solid #ff66cc;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+/* Decorative GIFs Container */
+#decoratives {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Floating title hover effect */
+h1:hover,
+h2:hover {
+  animation: float 2s infinite alternate;
+}
+@keyframes float {
+  from {
+    transform: translateY(0);
   }
-  
-  /* Decorative GIFs Container */
-  #decoratives {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    pointer-events: none;
+  to {
+    transform: translateY(-15px);
   }
-  
-  /* Floating title hover effect */
-  h1:hover,
-  h2:hover {
-    animation: float 2s infinite alternate;
-  }
-  @keyframes float {
-    from {
-      transform: translateY(0);
-    }
-    to {
-      transform: translateY(-15px);
-    }
-  }
-  
+}

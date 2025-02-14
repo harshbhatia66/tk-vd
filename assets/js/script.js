@@ -59,8 +59,8 @@ document.addEventListener("DOMContentLoaded", () => {
         mediaEl.alt = "Image format not supported.";
       };
       // Reduce the size for slide 1 and slide 16 (assuming index 0 and timelineData.length-1)
-      if (index === 0 || index === timelineData.length - 1) {
-        mediaEl.style.width = "80%"; // Adjust the width as needed.
+      if (index === 0 || index === 15) {
+        mediaEl.style.width = "90%"; // Adjust the width as needed.
         mediaEl.style.maxWidth = "500px"; // Optional: constrain the max width.
       }
     } else if (slide.type === "video") {
@@ -161,7 +161,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const columnPositions = {
         A: 2,    // Remains at 5vw
         C: 15,   // Increased to 25vw for extra spacing from A
-        F: 70,   // Moved closer to the center (from 75vw to 65vw)
+        F: 71.5,   // Moved closer to the center (from 75vw to 65vw)
         H: 85    // Remains at 85vw
       };
     
@@ -190,7 +190,12 @@ document.addEventListener("DOMContentLoaded", () => {
         
         // Make gif1 a little higher by subtracting an additional margin
         if (i === 0) {
-          topPercent -= 7; // adjust the offset as desired
+          topPercent -= 11; // adjust the offset as desired
+        }
+
+        // Make gif1 a little higher by subtracting an additional margin
+        if (i === 1) {
+          topPercent -= 3; // adjust the offset as desired
         }
         
         // Make gif 6 and 7 a bit lower by adding to the top position
@@ -207,6 +212,12 @@ document.addEventListener("DOMContentLoaded", () => {
         img.src = `assets/decoratives/gif${i + 1}.gif`;
         img.alt = `Decorative ${i + 1}`;
         img.style.width = "200px"; // Adjust size as needed
+
+        // Make gif1 a little smaller
+        if (i === 0) {
+          img.style.width = "160px"; // adjust the width as desired for gif1
+        }
+
         img.style.position = "absolute";
         img.style.left = `${leftPercent}vw`;
         img.style.top = `${topPercent}vh`;
